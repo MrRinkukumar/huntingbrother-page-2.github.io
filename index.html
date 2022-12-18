@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="keywords" content="toggle navbar Huntingbrother portfoliyo examples Rinku kumar saini">
+    <meta name="description" content="This is Example of toggle navbar is designed by Rinku kumar saini founder and CTO of Huntingbrother.">
+    <title>Huntingbrother | Home</title>
+  </head>
+  <body>
+    <div class="full-page">
+      <div class="navbar">
+        <div>
+          <a href="">Huntingbrother</a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Services</a></li>
+            <li>
+              <button
+                class="loginntn"
+                onclick="document.getElementById('login-form').style.display='block'"
+                style="width: auto"
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="login-form" class="login-page">
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" onclick="login()" class="toggle-btn">
+              Log In
+            </button>
+            <button type="button" onclick="Register()" class="toggle-btn">
+              Register
+            </button>
+          </div>
+          <!-- ------------Creating Login ------------------------------- -->
+          <form id="login" class="input-group-login">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter password"
+              required
+            />
+            <input
+              type="checkbox"
+              class="check-box"
+              placeholder="Enter password"
+              required
+            />
+            <span>Remember Password</span>
+            <button type="submit" class="submit-btn">Log In</button>
+          </form>
+
+          <form  id="register" class="input-group-register">
+            <input
+              type="text"
+              class="input-field"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="input-field"
+              placeholder="Last Name"
+              required
+            />
+            <input
+              type="email"
+              class="input-field"
+              placeholder="Email Id"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder="Enter password"
+              required
+            />
+            <input
+              type="password"
+              class="input-field"
+              placeholder=" Confirm password"
+              required
+            />
+            <input type="checkbox" class="check-box" required /><span>
+              I agree to the terms and conditions</span
+            >
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      var log = document.getElementById("login");
+      var register = document.getElementById("register");
+      var btn = document.getElementById("btn");
+      function Register(){
+        log.style.left = "-400px";
+        register.style.left = "50px";
+        btn.style.left = "110px";
+      }
+      function login(){
+        log.style.left = "50px";
+        register.style.left = "405px";
+        btn.style.left = "0px";
+      }
+    </script>
+    <script>
+        var model = document.getElementById('login-form');
+        window.onclick= function(event){
+            if(event.target==model){
+                model.style.display='none'
+            }
+        }
+    </script>
+  </body>
+</html>
